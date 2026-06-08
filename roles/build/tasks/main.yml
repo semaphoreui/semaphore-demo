@@ -23,7 +23,7 @@
     seconds: 10
 
 - name: Builds an artifact and stores it in storage
-  ansible.builtin.archive:
+  community.general.archive:
     path: "{{ build_temp_dir }}"
     dest: /tmp/demo-app-{{ semaphore_vars.task_details.target_version }}.tar.gz
     format: gz
